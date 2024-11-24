@@ -1,0 +1,188 @@
+/* Advanced Cute Styling for Mood Matcher */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header.main-header {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff77;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff6f91;
+    margin: 0;
+}
+
+header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Main Section */
+main.mood-matcher-page {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    width: 90%;
+}
+
+main select, main button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border: 2px solid #ff6f91;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+main select:hover, main button:hover {
+    background: #ff6f91;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+/* Mood Result */
+.mood-result {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #6a1b9a;
+    animation: fadeIn 1s ease;
+}
+
+/* Recommendations */
+.mood-recommendations {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.mood-recommendations p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.playlist-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.playlist-link:hover {
+    background: linear-gradient(135deg, #388e3c, #66bb6a);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer.main-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Elements */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ff9a9e;
+    opacity: 0.4;
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    animation: float 6s infinite alternate ease-in-out;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #fbc2eb;
+    opacity: 0.4;
+    border-radius: 50%;
+    bottom: -120px;
+    right: -100px;
+    animation: float 8s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+/* Bear Animation */
+.bear-animation {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    animation: moveBear 6s infinite alternate ease-in-out;
+}
+
+@keyframes moveBear {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(-20px) translateY(-10px);
+    }
+    100% {
+        transform: translateX(20px) translateY(10px);
+    }
+}
